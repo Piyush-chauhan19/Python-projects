@@ -19,4 +19,4 @@ for date in birthdates:
             connection.starttls()
             connection.login(user=user, password=password)
             connection.sendmail(from_addr=user, to_addrs=birthdays.values[date][0], msg=f"Happy Birthday!!!\n\n{msg}")
-        print(f"from {user} to {birthdays.values[date][0]}", f"Happy Birthday\n\n{msg}")
+        print(f"from {user} to {birthdays.values[date][0]}", f"Subject:Happy Birthday\n\n{msg}")
